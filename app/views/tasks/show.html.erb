@@ -1,0 +1,17 @@
+<h2><%= @task.title %></h2>
+
+<p><%= @task.details %></p>
+<% if @task.completed == true %>
+  <p><strong>This task is completed!</strong></p>
+<% else %>
+  <p><strong>This task is still pending!</strong></p>
+<% end %>
+<div>
+  <%= link_to "Edit Task", edit_task_path(@task) %>
+</div>
+<div>
+<%= link_to "XXXDelete Task XXX", task_path(@task), method: :delete %>
+</div>
+<div>
+<%= link_to "Back to task list", tasks_path %>
+</div>
